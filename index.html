@@ -17,7 +17,9 @@
       <img src="img/menu.svg" class="header__icon">
     </button>
     <nav class="header__nav">
-      <img src="img/logo.svg" alt="Logo" class="header__logo">
+      <a href="index.html">
+        <img src="img/logo.svg" alt="Logo" class="header__logo">
+      </a>
     </nav>
     <div class="header__user">
       <div class="cart__iconbadge">
@@ -29,12 +31,11 @@
     <div class="header__menunav">
       <img src="img/x.svg" alt="Cerrar menú" class="header__close">
       <ul>
-        <li><a href="#" class="header__link">Hombres</a></li>
-        <li><a href="#" class="header__link">Mujeres</a></li>
-        <li><a href="#" class="header__link">Niños</a></li>
-        <li><a href="#" class="header__link">Ofertas</a></li>
-        <li><a href="#" class="header__link">Novedades</a></li>
-        <li><a href="#" class="header__link">Contacto</a></li>
+        <li><a href="hombres.html" class="header__link">Hombres</a></li>
+        <li><a href="mujeres.html" class="header__link">Mujeres</a></li>
+        <li><a href="niños.html" class="header__link">Niños</a></li>
+        <li><a href="ofertas.html" class="header__link">Ofertas</a></li>
+        <li><a href="contacto.html" class="header__link">Contacto</a></li>
       </ul>
     </div>
   </header>
@@ -66,6 +67,7 @@
         <p class="products__price">Precio: $70.00</p>
         <button class="products__button">Agregar al carrito</button>
       </article>
+      
       <article class="products__item">
         <img src="img/converse-chuck-70-lona-hombre-bota-negros-.webp" alt="Tenis Converse Chuck 70" class="products__image">
         <h2 class="products__name">Converse Chuck 60</h2>
@@ -93,39 +95,33 @@
       <img src="img/x.svg" alt="Cerrar carrito" class="cart__closeIcon">
     </section>
 
+    <section class="size-guide">
+      <h2 class="size-guide__title">¿No sabes tu talla?</h2>
+      <p class="size-guide__text">Consulta nuestra guía para encontrar el ajuste perfecto.</p>
+      <a href="#" class="size-guide__button">Ver guía de tallas</a>
+    </section>
+
     <div class="banner2">
       <button class="products__button">Comprar Ahora</button>
     </div>
 
-    <section class="form">
-      <div class="contact">
-        <form class="contact__form">
-          <div class="form__group">
-            <label for="nombre" class="form__label">Nombre completo</label>
-            <input type="text" name="nombre" class="form__input" required>
-          </div>
-      </div>
-      <div class="form__group">
-        <label for="email" class="form__label">Correo electrónico</label>
-        <input type="email" name="email" class="form__input" required>
-      </div>
-      <div class="form__group">
-          <label for="asunto" class="form__label">Asunto</label>
-          <select name="asunto" class="form__select" required>
-            <option value="">Selecciona una opción</option>
-            <option value="pedido">Consulta sobre un pedido</option>
-            <option value="producto">Información de producto</option>
-            <option value="talla">Guía de tallas</option>
-            <option value="otro">Otro</option>
-          </select>
+    <section class="comments">
+      <h2 class="comments__title">Lo que dicen nuestros clientes</h2>
+      <div class="comments__list">
+        <div class="comments__item">
+          <p class="comments__text">“Mis Converse favoritas desde hace 10 años. ¡Calidad y estilo eterno!”</p>
+          <p class="comments__author">Ana R., Ciudad de México</p>
         </div>
-         <div class="form__group">
-          <label for="mensaje" class="form__label">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" class="form__text" rows="5" required></textarea>
+        <div class="comments__item">
+          <p class="comments__text">“Compré un par para mi hijo y otro para mí. ¡Ambos encantados!”</p>
+          <p class="comments__author">Luis M., Monterrey</p>
         </div>
-        <button type="submit" class="contact__button">Enviar mensaje</button>
+        <div class="comments__item">
+          <p class="comments__text">“Envío rápido, producto original y excelente atención.”</p>
+          <p class="comments__author">Sofía G., Guadalajara</p>
+        </div>
+      </div>
     </section>
-
   </main>
 
   <footer class="footer">

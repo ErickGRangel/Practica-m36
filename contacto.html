@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="scss/styles.css">
+  <script src="js/functions.js" defer></script>
+  <title>Contacto - Converse</title>
+</head>
+<body>
+
+  <header class="header">
+    <button class="header__menubtn">
+      <img src="img/menu.svg" class="header__icon">
+    </button>
+    <nav class="header__nav">
+      <a href="index.html" class="header__logo-link">
+        <img src="img/logo.svg" alt="Logo" class="header__logo">
+      </a>
+    </nav>
+    <div class="header__user">
+    </div>
+    <div class="header__menunav">
+      <img src="img/x.svg" alt="Cerrar menú" class="header__close">
+      <ul>
+        <li><a href="hombres.html" class="header__link">Hombres</a></li>
+        <li><a href="mujeres.html" class="header__link">Mujeres</a></li>
+        <li><a href="niños.html" class="header__link">Niños</a></li>
+        <li><a href="ofertas.html" class="header__link">Ofertas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="form">
+      <h1 class="main__title" style="text-align: center; margin-bottom: 20px;">Contáctanos</h1>
+      <div class="contact">
+        <form class="contact__form">
+          <div class="form__group">
+            <label for="nombre" class="form__label">Nombre completo</label>
+            <input type="text" name="nombre" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label for="email" class="form__label">Correo electrónico</label>
+            <input type="email" name="email" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label for="asunto" class="form__label">Asunto</label>
+            <select name="asunto" class="form__select" required>
+              <option value="">Selecciona una opción</option>
+              <option value="pedido">Consulta sobre un pedido</option>
+              <option value="producto">Información de producto</option>
+              <option value="talla">Guía de tallas</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="mensaje" class="form__label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form__text" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="contact__button">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/logo.svg" alt="Logo de Converse" class="footer__logo">
+    <p class="footer__text">&copy; 2025 Converse MX. Todos los derechos reservados.</p>
+    <div class="footer__links">
+      <a href="contacto.html" class="footer__link">Contacto</a>
+      <a href="#" class="footer__link">Términos</a>
+      <a href="#" class="footer__link">Privacidad</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
+</body>
+</html>

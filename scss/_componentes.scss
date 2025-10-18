@@ -214,6 +214,7 @@
 
 .contact__button {
   @include button-style($bg: $secundaryColor, $color: #fff);
+  @include icon-hover (.9);
   padding: 14px;
   font-size: 18px;
   width: 100%;

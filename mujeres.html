@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="scss/styles.css">
+  <script src="js/functions.js" defer></script>
+  <title>Mujeres - Converse</title>
+</head>
+<body>
+  <header class="header">
+    <button class="header__menubtn">
+      <img src="img/menu.svg" class="header__icon">
+    </button>
+    <nav class="header__nav">
+      <a href="index.html">
+        <img src="img/logo.svg" alt="Logo" class="header__logo">
+      </a>
+    </nav>
+    <div class="header__user">
+      <div class="cart__iconbadge">
+        <i data-feather="shopping-cart" class="header__cart"></i>
+        <span class="cart__badge">0</span>
+      </div>
+      <i data-feather="heart" class="header__icon"></i>
+    </div>
+    <div class="header__menunav">
+      <img src="img/x.svg" alt="Cerrar menú" class="header__close">
+      <ul>
+        <li><a href="hombres.html" class="header__link">Hombres</a></li>
+        <li><a href="niños.html" class="header__link">Niños</a></li>
+        <li><a href="ofertas.html" class="header__link">Ofertas</a></li>
+        <li><a href="contacto.html" class="header__link">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="main__banner">
+      <h1 class="main__title">Colección Mujeres</h1>
+      <p class="main__text">Estilo urbano, comodidad y personalidad en cada paso. Converse diseñado para mujeres que marcan tendencia.</p>
+    </section>
+
+    <section class="products">
+      <article class="products__item">
+        <img src="img/converse-chuck-70-lona-hombre-bota-beige.webp" alt="Converse Chuck 70 Beige" class="products__image">
+        <h2 class="products__name">Chuck 70 Beige</h2>
+        <p class="products__price">Precio: $70.00</p>
+        <button class="products__button">Agregar al carrito</button>
+      </article>
+      <article class="products__item">
+        <img src="img/converse-run-star-hike-en-bota-de-lona-unisex-negro.webp" alt="Converse Run Star Hike Negro" class="products__image">
+        <h2 class="products__name">Run Star Hike Negro</h2>
+        <p class="products__price">Precio: $85.00</p>
+        <button class="products__button">Agregar al carrito</button>
+      </article>
+      <article class="products__item">
+        <img src="img/converse-chuck-70-lona-hombre-bota-negros-.webp" alt="Converse Chuck 70 Rosa" class="products__image">
+        <h2 class="products__name">Chuck 70 Rosa Pastel</h2>
+        <p class="products__price">Precio: $70.00</p>
+        <button class="products__button">Agregar al carrito</button>
+      </article>
+    </section>
+
+    <section class="cart">
+      <h2 id="cart-title" class="cart__title">Carrito</h2>
+      <img src="img/x.svg" alt="Cerrar carrito" class="cart__closeIcon">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/logo.svg" alt="Logo de Converse" class="footer__logo">
+    <p class="footer__text">&copy; 2025 Converse MX. Todos los derechos reservados.</p>
+    <div class="footer__links">
+      <a href="contacto.html" class="footer__link">Contacto</a>
+      <a href="#" class="footer__link">Términos</a>
+      <a href="#" class="footer__link">Privacidad</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
