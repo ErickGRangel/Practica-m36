@@ -1,21 +1,37 @@
-.header{
-  &__menubtn{
+.header {
+  &__menubtn {
     @include button-style($padding: 0px 10px);
-    @include celular { display: block; }
+    @include celular { 
+      display: block; 
+    }
+    color: $texto-oscuro; 
   }
-  ul{
+  
+  ul {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
-  li{
-     @include icon-hover(.95);
-     @include celular { font-size: 40px;}
-  }
-  &__link {
-  @include tableta { font-size: 1.2rem; margin: 0 10px; }
-  @include celular { font-size: 16px; margin: 0 8px; }
   
+  li {
+    @include icon-hover(.95);
+    @include celular { 
+      font-size: 40px;
+    }
+  }
+  
+  &__link {
+    color: $texto-oscuro; 
+    
+    @include tableta { 
+      font-size: 1.2rem; 
+      margin: 0 10px; 
+    }
+    
+    @include celular { 
+      font-size: 16px; 
+      margin: 0 8px; 
+    }
   }
 }
 
@@ -26,25 +42,40 @@
   width: 35px;
   height: 30px;
   @include icon-hover;
+  
   @include celular {
     width: 30px;
     height: 30px;
   }
 }
+
 .main__title {
   @extend %title;
   margin: 0;
   padding: 9px 0;
-  @include tableta { font-size: 3rem; }
-  @include celular { font-size: 40px; }
+  color: $texto-oscuro; 
+  
+  @include tableta { 
+    font-size: 3rem; 
+  }
+  
+  @include celular { 
+    font-size: 40px; 
+  }
 }
 
 .main__text {
   font-size: 25px;
-  color: #000;
-  opacity: 0.9;
-  @include tableta { font-size: 1.2rem; }
-  @include celular { font-size: 19px; }
+  color: $texto-oscuro; 
+  font-weight: 500;
+  
+  @include tableta { 
+    font-size: 1.2rem; 
+  }
+  
+  @include celular { 
+    font-size: 19px; 
+  }
 }
 
 .products__item {
@@ -53,8 +84,11 @@
   align-items: center;
   overflow: hidden;
   @include box-shadow();
+  background-color: $mainColor;
+  color: $texto-oscuro; 
+  
   @include celular {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $borderColor;
   }
 }
 
@@ -64,6 +98,7 @@
   object-fit: cover;
   transition: transform 0.4s ease;
   @include icon-hover(1.2);
+  
   @include tableta {
     width: 155px;
     height: 200px;
@@ -72,12 +107,18 @@
 
 .products__name {
   font-size: 30px;
-  @include celular { font-size: 25px; }
+  color: $texto-oscuro; 
+  
+  @include celular { 
+    font-size: 25px; 
+  }
 }
 
 .products__price {
   font-size: 20px;
-  opacity: 0.6;
+  color: $texto-oscuro; 
+  opacity: 0.8;
+  
   @include celular {
     font-size: 16px;
     margin: 10px;
@@ -85,14 +126,24 @@
 }
 
 .products__button {
-  @include button-style();
+  @include button-style($bg: $mainColor, $color: $texto-oscuro);
   @include icon-hover;
+  border: 2px solid $borderColor;
+  
+  &:hover {
+    background-color: $secundaryColor;
+    color: $texto-claro; 
+  }
 }
 
 .cart {
-  background-color: #fff;
+  background-color: $mainColor;
+  color: $texto-oscuro; 
   box-shadow: -19px 0px 20px rgba(0, 0, 0, 0.2);
-  @include celular { box-shadow: none; }
+  
+  @include celular { 
+    box-shadow: none; 
+  }
 
   &__title {
     width: 100%;
@@ -100,25 +151,35 @@
     font-weight: 600;
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 1px solid #190303;
-    @include celular { font-size: 25px; }
-    @include tableta { font-size: 20px; }
+    border-bottom: 1px solid darken($mainColor, 20%);
+    color: $texto-oscuro;
+    
+    @include celular { 
+      font-size: 25px; 
+    }
+    
+    @include tableta { 
+      font-size: 20px; 
+    }
   }
 
   &__item {
-    border-bottom: 1px solid $mainColor;
+    border-bottom: 1px solid darken($mainColor, 10%);
+    color: $texto-oscuro; 
   }
 
   &__image {
     width: 30%;
-    @include celular { width: 120px; }
+    
+    @include celular { 
+      width: 120px; 
+    }
   }
 
   &__trash {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    @include celular {}
   }
 
   &__closeIcon {
@@ -129,12 +190,20 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-    @include celular { width: 20px; height: 20px; top: 10px; right: 10px; }
+    
+    @include celular { 
+      width: 20px; 
+      height: 20px; 
+      top: 10px; 
+      right: 10px; 
+    }
   }
 
   &__description {
     font-size: 20px;
     font-weight: 600;
+    color: $texto-oscuro; 
+    
     @include celular {
       font-size: 18px;
       margin: 5px;
@@ -153,8 +222,8 @@
     box-sizing: border-box;
     top: 13px;
     right: 65px;
-    background-color: #e74c3c; 
-    color: white;
+    background-color: #c0392b; 
+    color: $texto-claro; 
     font-size: 10px;
     font-weight: bold;
     width: 18px;
@@ -176,6 +245,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  color: $texto-oscuro; 
 }
 
 .form__group {
@@ -188,7 +258,7 @@
   font-family: $mainFuente;
   font-weight: 700;
   font-size: 16px;
-  color: #ffffff;
+  color: $texto-oscuro; 
 }
 
 .form__input,
@@ -197,9 +267,10 @@
   padding: 12px;
   font-family: $mainFuente;
   font-size: 16px;
-  border: 2px solid #141212;
+  border: 2px solid $borderColor;
   border-radius: 4px;
-  background-color: #eeebebd9;
+  background-color: $mainColor; 
+  color: $texto-oscuro; 
 
   &:focus {
     outline: 2px solid $secundaryColor;
@@ -213,22 +284,29 @@
 }
 
 .contact__button {
-  @include button-style($bg: $secundaryColor, $color: #fff);
+  @include button-style($bg: $secundaryColor, $color: $texto-claro);
   @include icon-hover (.9);
   padding: 14px;
   font-size: 18px;
   width: 100%;
   margin-top: 8px;
+  border: none;
+  
+  &:hover {
+    background-color: darken($secundaryColor, 10%);
+    color: $texto-claro; 
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .products__button:hover {
     background-color: $secundaryColor;
-    color: #fff;
+    color: $texto-claro; 
   }
+  
   .header__link:hover,
   .footer__link:hover {
-    color: $secundaryColor;
+    color: $secundaryColor; 
     text-decoration: none;
   }
 }

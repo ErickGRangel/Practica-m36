@@ -13,19 +13,19 @@
 </head>
 <body>
 
-  <header class="header">
-    <button class="header__menubtn">
-      <img src="img/menu.svg" class="header__icon">
+  <header class="header" role="banner" aria-label="Cabecera principal">
+    <button class="header__menubtn" aria-label="Abrir menú de navegación">
+      <img src="img/menu.svg" class="header__icon" alt="Icono de menú - Mostrar opciones de navegación">
     </button>
-    <nav class="header__nav">
+    <nav class="header__nav" role="navigation" aria-label="Navegación principal">
       <a href="index.html" class="header__logo-link">
-        <img src="img/logo.svg" alt="Logo" class="header__logo">
+        <img src="img/logo.svg" alt="Logo de Converse - Ir a página de inicio" class="header__logo">
       </a>
     </nav>
     <div class="header__user">
     </div>
     <div class="header__menunav">
-      <img src="img/x.svg" alt="Cerrar menú" class="header__close">
+      <img src="img/x.svg" alt="Icono de cerrar - Ocultar menú de navegación" class="header__close">
       <ul>
         <li><a href="hombres.html" class="header__link">Hombres</a></li>
         <li><a href="mujeres.html" class="header__link">Mujeres</a></li>
@@ -35,22 +35,22 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" role="main">
     <section class="form">
-      <h1 class="main__title" style="text-align: center; margin-bottom: 20px;">Contáctanos</h1>
+      <h1 class="main__title">Contáctanos</h1>
       <div class="contact">
         <form class="contact__form">
           <div class="form__group">
             <label for="nombre" class="form__label">Nombre completo</label>
-            <input type="text" name="nombre" class="form__input" required>
+            <input type="text" name="nombre" id="nombre" class="form__input" required>
           </div>
           <div class="form__group">
             <label for="email" class="form__label">Correo electrónico</label>
-            <input type="email" name="email" class="form__input" required>
+            <input type="email" name="email" id="email" class="form__input" required>
           </div>
           <div class="form__group">
             <label for="asunto" class="form__label">Asunto</label>
-            <select name="asunto" class="form__select" required>
+            <select name="asunto" id="asunto" class="form__select" required>
               <option value="">Selecciona una opción</option>
               <option value="pedido">Consulta sobre un pedido</option>
               <option value="producto">Información de producto</option>
@@ -66,10 +66,14 @@
         </form>
       </div>
     </section>
+    
+    <section class="multilenguaje">
+      <p lang="en">For English support, please call our customer service at 1-800-CONVERSE.</p>
+    </section>
   </main>
 
-  <footer class="footer">
-    <img src="img/logo.svg" alt="Logo de Converse" class="footer__logo">
+  <footer class="footer" role="contentinfo" aria-label="Información del pie de página">
+    <img src="img/logo.svg" alt="Logo de Converse - Marca de calzado deportivo" class="footer__logo">
     <p class="footer__text">&copy; 2025 Converse MX. Todos los derechos reservados.</p>
     <div class="footer__links">
       <a href="contacto.html" class="footer__link">Contacto</a>

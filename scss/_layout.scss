@@ -4,13 +4,17 @@
   background-color: $mainColor;
   @include flex-center(row, 0);
   justify-content: space-between;
+  color: $texto-oscuro;
 
   &__logo {
     width: 280px;
     padding-left: 5.2rem;
-    @include tableta { padding-left: 5px;width: 150px;
+    @include tableta { 
+      padding-left: 5px;
+      width: 150px;
     }
   }
+  
   &__nav {
     @include flex-center(row, 35px);
     @include tableta { gap: 20px; }
@@ -19,6 +23,11 @@
   &__link {
     @extend %link;
     @include tableta { font-size: 1rem; }
+    color: $texto-oscuro; 
+    
+    &:hover {
+      color: $secundaryColor; 
+    }
   }
 
   &__user {
@@ -46,18 +55,27 @@
     transition: left 0.3s ease-in-out; 
     background-color: $mainColor;
     box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
-    @include celular { box-shadow: none; }
-    &.shownav{
+    color: $texto-oscuro; 
+    
+    @include celular { 
+      box-shadow: none; 
+    }
+    
+    &.shownav {
       left: 0;
-       @include celular { width: 30%; height: 90%;}
+      @include celular { 
+        width: 30%; 
+        height: 90%;
+      }
     }
   }
+  
   &__close {
     width: 35px;
     align-self: flex-end;
   }
 }
-  
+
 .main {
   &__banner {
     width: 100%;
@@ -68,7 +86,11 @@
     background-position: center;
     background-size: cover;
     text-align: center;
-    @include tableta { padding: 30px 0; }
+    color: $texto-oscuro; 
+    
+    @include tableta { 
+      padding: 30px 0; 
+    }
   }
 }
 
@@ -78,7 +100,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
-  @include tableta { grid-template-columns: repeat(2, 1fr); }
+  
+  @include tableta { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
   @include celular {
     grid-template-columns: 1fr;
     padding: 0px 20px;
@@ -94,7 +120,10 @@
   top: 9%;
   right: -100%;
   transition: right 0.3s ease-in-out;
-  &.show{
+  background-color: $mainColor; 
+  color: $texto-oscuro; 
+  
+  &.show {
     right: 0;
   }
 
@@ -102,6 +131,7 @@
     width: 400px;
     top: 80px;
   }
+  
   @include celular {
     width: 100%;
   }
@@ -111,18 +141,22 @@
     justify-content: space-between;
     padding: 15px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    
     @include celular {
       flex-direction: column;
       gap: 15px;
     }
   }
 }
+
 .size-guide {
   padding: 50px 20px;
   background-color: $mainColor;
   text-align: center;
   margin: 10px 0;
   border-radius: 10%;
+  color: $texto-oscuro; 
 
   @include tableta {
     padding: 40px 15px;
@@ -137,7 +171,7 @@
     @extend %title;
     font-size: 36px;
     margin-bottom: 15px;
-    color: #190303;
+    color: $texto-oscuro; 
 
     @include celular {
       font-size: 28px;
@@ -147,7 +181,7 @@
   &__text {
     font-family: $mainFuente;
     font-size: 18px;
-    color: #333;
+    color: $texto-oscuro; 
     max-width: 600px;
     margin: 0 auto 25px;
 
@@ -157,17 +191,19 @@
   }
 
   &__button {
-    @include button-style($bg: $secundaryColor, $color: white, $padding: 12px 24px);
+    @include button-style($bg: $secundaryColor, $color: $texto-claro, $padding: 12px 24px);
     font-weight: 700;
     text-decoration: none;
     display: inline-block;
 
     &:hover {
       background-color: darken($secundaryColor, 10%);
+      color: $texto-claro; 
     }
   }
 }
-.banner2{
+
+.banner2 {
   height: 265px;
   width: 100%;
   @include flex-center(column, 0px);
@@ -175,7 +211,8 @@
   margin: 24px 0;
   background-image: url("../img/secondbanner.webp");
   background-position: center;
-  background-size: cover;   
+  background-size: cover;
+  color: $texto-oscuro; 
 }
 
 .form {
@@ -184,15 +221,35 @@
   width: 100%;
   background-image: url("../img/fondo-form.jpg");
   background-size: cover;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
+  color: $texto-oscuro; 
+   position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85); 
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 }
+
 .comments {
   padding: 60px 20px;
   background-color: #f9f9f9;
   text-align: center;
+  color: $texto-oscuro; 
 
   @include tableta {
     padding: 50px 15px;
@@ -206,7 +263,7 @@
     @extend %title;
     font-size: 36px;
     margin-bottom: 40px;
-    color: #190303;
+    color: $texto-oscuro; 
 
     @include celular {
       font-size: 28px;
@@ -237,6 +294,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px $colorShadow;
     text-align: left;
+    color: $texto-oscuro; 
 
     @include celular {
       padding: 20px;
@@ -247,7 +305,7 @@
     font-family: $mainFuente;
     font-size: 16px;
     font-style: italic;
-    color: #333;
+    color: $texto-oscuro; 
     margin-bottom: 15px;
     line-height: 1.5;
   }
@@ -256,11 +314,12 @@
     font-family: $mainFuente;
     font-size: 14px;
     font-weight: 700;
-    color: $secundaryColor;
+    color: $secundaryColor; 
     text-align: right;
     margin: 0;
   }
 }
+
 .footer {
   @include flex-center(column, 15px);
   align-items: center;
@@ -268,6 +327,7 @@
   margin-top: 30px;
   border-top: 2px solid $borderColor;
   background-color: $footerBg;
+  color: $texto-oscuro; 
 
   &__logo {
     width: 200px;
@@ -278,10 +338,15 @@
   }
 
   &__link {
-  @extend %link;
+    @extend %link;
+    color: $texto-oscuro;
+    &:hover {
+      color: $secundaryColor;
+    }
   }
 
   &__text {
+    color: $texto-oscuro; 
     @include celular {
       text-align: center;
     }

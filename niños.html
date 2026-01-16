@@ -12,13 +12,13 @@
   <title>Niños - Converse</title>
 </head>
 <body>
-  <header class="header">
-    <button class="header__menubtn">
-      <img src="img/menu.svg" class="header__icon">
+  <header class="header" role="banner" aria-label="Cabecera principal">
+    <button class="header__menubtn" aria-label="Abrir menú de navegación">
+      <img src="img/menu.svg" class="header__icon" alt="Icono de menú">
     </button>
-   <nav class="header__nav">
+    <nav class="header__nav" role="navigation" aria-label="Navegación principal">
       <a href="index.html">
-        <img src="img/logo.svg" alt="Logo" class="header__logo">
+        <img src="img/logo.svg" alt="Logo de Converse" class="header__logo">
       </a>
     </nav>
     <div class="header__user">
@@ -39,27 +39,28 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" role="main">
     <section class="main__banner">
       <h1 class="main__title">Colección Niños</h1>
       <p class="main__text">Tenis resistentes, ligeros y divertidos para los más pequeños. ¡Converse para futuras leyendas!</p>
+      <p class="main__text" lang="en">Resistant, lightweight and fun sneakers for the little ones. Converse for future legends!</p>
     </section>
 
     <section class="products">
       <article class="products__item">
-        <img src="img/converse-chuck-70-lona-hombre-bota-negros-.webp" alt="Converse Chuck 70 Infantil Azul" class="products__image">
+        <img src="img/converse-chuck-70-lona-hombre-bota-negros-.webp" alt="Converse Chuck 70 Azul Infantil" class="products__image">
         <h2 class="products__name">Chuck 70 Azul Infantil</h2>
         <p class="products__price">Precio: $55.00</p>
         <button class="products__button">Agregar al carrito</button>
       </article>
       <article class="products__item">
-        <img src="img/converse-chuck-70-lona-hombre-bota-beige.webp" alt="Converse Beige Infantil" class="products__image">
+        <img src="img/converse-chuck-70-lona-hombre-bota-beige.webp" alt="Converse Chuck 70 Beige Infantil" class="products__image">
         <h2 class="products__name">Chuck 70 Beige Infantil</h2>
         <p class="products__price">Precio: $55.00</p>
         <button class="products__button">Agregar al carrito</button>
       </article>
       <article class="products__item">
-        <img src="img/converse-run-star-hike-en-bota-de-lona-unisex-negro.webp" alt="Converse Plataforma Infantil" class="products__image">
+        <img src="img/converse-run-star-hike-en-bota-de-lona-unisex-negro.webp" alt="Converse Run Star Hike Infantil" class="products__image">
         <h2 class="products__name">Run Star Hike Infantil</h2>
         <p class="products__price">Precio: $65.00</p>
         <button class="products__button">Agregar al carrito</button>
@@ -72,7 +73,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo" aria-label="Información del pie de página">
     <img src="img/logo.svg" alt="Logo de Converse" class="footer__logo">
     <p class="footer__text">&copy; 2025 Converse MX. Todos los derechos reservados.</p>
     <div class="footer__links">

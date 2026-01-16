@@ -5,12 +5,11 @@
   gap: $gap;
 }
 
-
 @mixin box-shadow($color: $colorShadow) {
   box-shadow: 2px 2px 4px $color;
 }
 
-@mixin button-style($bg: $mainColor, $color: #000, $padding: 10px 15px) {
+@mixin button-style($bg: $mainColor, $color: $texto-oscuro, $padding: 10px 15px) {
   background-color: $bg;
   color: $color;
   border: none;
@@ -21,6 +20,13 @@
   cursor: pointer;
   transition: background 0.2s;
   margin-bottom: 5px;
+  
+
+  @if (lightness($bg) > 50) {
+    color: $texto-oscuro; 
+  } @else {
+    color: $texto-claro;  
+  }
 }
 
 @mixin icon-hover($scale-amount: 1.1) { 

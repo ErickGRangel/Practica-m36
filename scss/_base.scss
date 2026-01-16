@@ -1,4 +1,24 @@
-*{
+* {
   font-family: $mainFuente;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $mainColor;
+  color: $texto-oscuro; 
+  line-height: 1.6;
+}
+
+a {
+  color: $texto-oscuro;
+  text-decoration: none;
+  
+  &:hover {
+    color: $secundaryColor;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $texto-oscuro;
+  margin: 0;
 }
